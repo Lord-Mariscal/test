@@ -4,66 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <title>VALIDACIÓN FORMULARIO JAVASCRIPT</title>
-    <script>
-   
-            function posEnviar(formulario_datos){
-                
-                if(formulario_datos.nombre.value == ""){
-                    alert("Introduzca su nombre");
-                    formulario_datos.nombre.focus();
-                    return false;
-                }
-                if(formulario_datos.edad.value ==""){
-                    alert("Introduzca su edad");
-                     formulario_datos.edad.focus();
-                     return false;
-                  }
-                if(formulario_datos.direccion.value == ""){
-                    alert("Introduzca su dirección");
-                    formulario_datos.direccion.focus();
-                    return false;
-                }
-                if(formulario_datos.ciudad.value == ""){
-                    alert("Introduzca su ciudad");
-                    formulario_datos.ciudad.focus();
-                    return false;
-                }
-                if(formulario_datos.cpostal.value == ""){
-                    alert("Introduzca su código postal");
-                    formulario_datos.cpostal.focus();
-                    return false;
-                }
-                if(isNaN (formulario_datos.cpostal.value)){
-                    alert("Código postal no válido");
-                    formulario_datos.cpostal.focus();
-                    return false;
-                }
-           
-                if(formulario_datos.telefono.value == ""){
-                    alert("Introduzca su teléfono");
-                    formulario_datos.telefono.focus();
-                    return false;
-                    }
-                  if(isNaN(formulario_datos.telefono.value)){
-                    alert("Número de teléfono no válido");
-                    formulario_datos.telefono.focus();
-                    return false;
-                  }
-                
-                if(formulario_datos.email.value == ""){
-                    alert("Introduzca su correo electrónico");
-                    formulario_datos.email.focus();
-                    return false;
-                    }
-                
-            }
-        
-        
-        </script>
-    <style>
-    #contenedor{
 
+    <style>
+    select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+        width: 100%;
+    }
+    .select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}    .select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 12px 22px;
+        outline: 0;
+        border: 0px solid #000000;
+        border-radius: 29px;
+        background: #e6e6e6;
+        color: #7b7b7b;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #000000;
+            background: #cccccc;
+        }
+        .select select:disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    top: 15px;
+    right: 24px;
+    width: 10px;
+    height: 10px;
+    border: solid #7b7b7b;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+    border-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+    border-top-color: #cccccc;
+}
+    #contenedor{
         width: 95%;
         padding: 30px;
         margin-top:10px;
@@ -71,8 +75,100 @@
     .formulario_contacto{
         margin: 0 auto;
         text-align: center;
-        border:1px solid red;
-        width: 30%;
+        border:1px solid rgb(255, 255, 255);
+        width: 39%;
+        border-radius: 13%;
+        background-image: linear-gradient(to right bottom, #ca35bb, #dd34ab, #ec3a9b, #f6458d, #fc5380, #ff6174, #ff6f6b, #ff7e63, #ff905b, #ffa355, #ffb752, #ffcb53);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+            }
+    form{
+        padding-top: 15px;
+    }
+    .boton{
+        display: inline-block;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        cursor: pointer;
+        padding: 10px 20px;
+        border: 1px solid #018dc4;
+        -webkit-border-radius: 13px;
+        border-radius: 13px;
+        font: normal 16px/normal "Lucida Console", Monaco, monospace;
+        color: rgba(255,255,255,0.9);
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        background: #0199d9;
+        -webkit-box-shadow: 3px 2px 6px 0 rgba(0,0,0,0.2) ;
+        box-shadow: 3px 2px 6px 0 rgba(0,0,0,0.2) ;
+        text-shadow: 3px 1px 2px rgba(15,73,168,0.66) ;
+        -webkit-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+        -moz-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+        -o-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+        transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    }
+    .boton:hover{
+        display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  font: normal 16px/normal "Lucida Console", Monaco, monospace;
+  color: rgba(178,176,176,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(1,84,117,0.9);
+  -webkit-box-shadow: 5px 2px 6px 2px rgba(17,17,17,0.2) inset;
+  box-shadow: 5px 2px 6px 2px rgba(17,17,17,0.2) inset;
+  -webkit-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: background-color 300ms cubic-bezier(0.82, -0.055, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    }
+    input{
+        display: inline-block;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        padding: 10px 20px;
+        border: 1px solid #b7b7b7;
+        border-right-style: dotted;
+        -webkit-border-radius: 30px / 27px;
+        border-radius: 30px / 27px;
+        font: normal 16px/0 "Times New Roman", Times, serif;
+        color: rgba(0,0,0,1);
+        text-indent: 2px;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        background: rgba(252,252,252,1);
+        -webkit-box-shadow: 7px 4px 2px 0 rgba(0,0,0,0.2) inset;
+        box-shadow: 7px 4px 2px 0 rgba(0,0,0,0.2) inset;
+        text-shadow: 1px 2px 1px rgba(191,191,191,0.73) ;
+        -webkit-transition: background 218ms cubic-bezier(0, 1.005, 0.99, -0.12) 5ms;
+        -moz-transition: background 218ms cubic-bezier(0, 1.005, 0.99, -0.12) 5ms;
+        -o-transition: background 218ms cubic-bezier(0, 1.005, 0.99, -0.12) 5ms;
+        transition: background 218ms cubic-bezier(0, 1.005, 0.99, -0.12) 5ms;
+        -webkit-transform: rotateX(-0.5729577951308231deg) rotateY(1.1459155902616462deg)   ;
+        transform: rotateX(-0.5729577951308231deg) rotateY(1.1459155902616462deg)   ;
+
+    }
+    h2{
+        font-family: 'DM Serif Display', serif;
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    label{
+        font-family: 'Arvo', serif;
+    }
+    .separador{
+        border:#242323f1 1px solid;
+        width:80%;
     }
 </style>
 </head>
@@ -81,31 +177,95 @@
     <div id="contenedor">
         <div class="formulario_contacto">
         <h2>FORMULARIO</h2> 
+        <hr class="separador"> 
         <form method="POST" enctype="text/plain" name="formulario_datos" onsubmit="return posEnviar(this)">
-            <label>Introduzca su nombre:</label><br>
-            <input type="text" name="nombre" placeholder="Nombre" size="40" maxlength="40"><br>
-            <label>Edad:</label><br>
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" placeholder="Nombre" size="10" maxlength="10"><br>
+            <label>Apellido:</label><br>
+            <input type="text" name="nombre" placeholder="Nombre" size="10" maxlength="10"><br> 
+            <label>Especifique su rango de edad:</label><br>
             <input type="text" name="edad" placeholder="Edad" size="4" maxlength="3"><br>
             <label>Dirección</label><br>
-            <input type="text" name="direccion" placeholder="Dirección" size="40" maxlength="60"><br>
+            <input type="text" name="direccion" placeholder="Dirección" size="30" maxlength="60"><br>
             <label>Ciudad de residencia:</label><br>
             <input type="text" name="ciudad" placeholder="Ciudad" size="30" maxlength="30"><br>
-            <label>Código postal:</label><br>
+            <label>Código postal:</label><br> 
             <input type="text" name="cpostal" placeholder="Código Postal" size="8" maxlength="8"><br>
             <label>Teléfono de contacto:</label><br>
             <input type="text" name="telefono" placeholder="Teléfono" size="10" maxlength="10"><br>
             <label>Correo electrónico:</label><br>
-            <input type="text" name="email" placeholder="Correo Electrónico" size="40" maxlength="60"><br>
+            <input type="text" name="email" placeholder="Correo Electrónico" size="30" maxlength="60"><br>
             <label>¿Qué servicio desea?</label><br>
+            <div class="select">
             <select name="pregunta" onchange="nuevaOpcion()">
                 <option>Imágenes sobre el producto</option>
                 <option>Precio del producto</option>
                 <option>Consulta general</option>
+                <div class="select_arrow">
+                    </div>
+                </div>
             </select><br><br>
-            <input type="submit" value="ENVIAR FORMULARIO"><br><br>
+            <input class="boton" type="submit" value="ENVIAR FORMULARIO"><br><br>
 
         </form>
     </div>
-</div>    
+</div>
+
+<script>
+   
+    function posEnviar(formulario_datos){
+        
+        if(formulario_datos.nombre.value == ""){
+            alert("Introduzca su nombre");
+            formulario_datos.nombre.focus();
+            return false;
+        }
+        if(formulario_datos.edad.value ==""){
+            alert("Introduzca su edad");
+             formulario_datos.edad.focus();
+             return false;
+          }
+        if(formulario_datos.direccion.value == ""){
+            alert("Introduzca su dirección");
+            formulario_datos.direccion.focus();
+            return false;
+        }
+        if(formulario_datos.ciudad.value == ""){
+            alert("Introduzca su ciudad");
+            formulario_datos.ciudad.focus();
+            return false;
+        }
+        if(formulario_datos.cpostal.value == ""){
+            alert("Introduzca su código postal");
+            formulario_datos.cpostal.focus();
+            return false;
+        }
+        if(isNaN (formulario_datos.cpostal.value)){
+            alert("Código postal no válido");
+            formulario_datos.cpostal.focus();
+            return false;
+        }
+   
+        if(formulario_datos.telefono.value == ""){
+            alert("Introduzca su teléfono");
+            formulario_datos.telefono.focus();
+            return false;
+            }
+          if(isNaN(formulario_datos.telefono.value)){
+            alert("Número de teléfono no válido");
+            formulario_datos.telefono.focus();
+            return false;
+          }
+        
+        if(formulario_datos.email.value == ""){
+            alert("Introduzca su correo electrónico");
+            formulario_datos.email.focus();
+            return false;
+            }
+        
+    }
+
+
+</script>
 </body>
 </html>
