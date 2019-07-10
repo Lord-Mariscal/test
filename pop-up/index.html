@@ -76,7 +76,7 @@ cursor: pointer;
 }
     </style>
 </head>
-<body onload="Abrir()">
+<body onload="Abr()">
 
         <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>
         <div class="overlay" id="overlay">
@@ -107,15 +107,16 @@ cursor: pointer;
         </div>
 
     <script>
-	    var overlay = document.getElementById('overlay'),
+        var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+	        overlay = document.getElementById('overlay'),
 	        popup = document.getElementById('popup'),
 	        btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
 function Abrir() {
-
+btnAbrirPopup.addEventListener('click', function(){
 	overlay.classList.add('active');
 	popup.classList.add('active');
-}
+})};
 
 btnCerrarPopup.addEventListener('click', function(e){
 	e.preventDefault();
