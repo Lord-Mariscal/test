@@ -29,7 +29,6 @@
 	background: #F8F8F8;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
-
 	padding: 20px;
 	text-align: center;
 	width: 600px;
@@ -77,7 +76,7 @@ cursor: pointer;
 }
     </style>
 </head>
-<body>
+<body onload="Abrir()">
 
         <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>
         <div class="overlay" id="overlay">
@@ -108,22 +107,22 @@ cursor: pointer;
         </div>
 
     <script>
-        var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
-	overlay = document.getElementById('overlay'),
-	popup = document.getElementById('popup'),
-	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+	    var overlay = document.getElementById('overlay'),
+	        popup = document.getElementById('popup'),
+	        btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
-btnAbrirPopup.addEventListener('click', function(){
+function Abrir() {
+
 	overlay.classList.add('active');
 	popup.classList.add('active');
-});
+}
 
 btnCerrarPopup.addEventListener('click', function(e){
 	e.preventDefault();
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
 });
-function checkForm(form)
+function btnCerrarPopup(form)
 {
     if(!form.terms.checked) {
       alert("Por favor indique que acepta los Términos y Condiciones");
