@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VALIDACIÓN FORMULARIO JAVASCRIPT</title>
+    <script>
+   
+            function posEnviar(formulario_datos){
+                
+                if(formulario_datos.nombre.value == ""){
+                    alert("Introduzca su nombre");
+                    formulario_datos.nombre.focus();
+                    return false;
+                }
+                if(formulario_datos.edad.value ==""){
+                    alert("Introduzca su edad");
+                     formulario_datos.edad.focus();
+                     return false;
+                  }
+                if(formulario_datos.direccion.value == ""){
+                    alert("Introduzca su dirección");
+                    formulario_datos.direccion.focus();
+                    return false;
+                }
+                if(formulario_datos.ciudad.value == ""){
+                    alert("Introduzca su ciudad");
+                    formulario_datos.ciudad.focus();
+                    return false;
+                }
+                if(formulario_datos.cpostal.value == ""){
+                    alert("Introduzca su código postal");
+                    formulario_datos.cpostal.focus();
+                    return false;
+                }
+                if(isNaN (formulario_datos.cpostal.value)){
+                    alert("Código postal no válido");
+                    formulario_datos.cpostal.focus();
+                    return false;
+                }
+           
+                if(formulario_datos.telefono.value == ""){
+                    alert("Introduzca su teléfono");
+                    formulario_datos.telefono.focus();
+                    return false;
+                    }
+                  if(isNaN(formulario_datos.telefono.value)){
+                    alert("Número de teléfono no válido");
+                    formulario_datos.telefono.focus();
+                    return false;
+                  }
+                
+                if(formulario_datos.email.value == ""){
+                    alert("Introduzca su correo electrónico");
+                    formulario_datos.email.focus();
+                    return false;
+                    }
+                
+            }
+        
+        
+        </script>
+    <style>
+    #contenedor{
+
+        width: 95%;
+        padding: 30px;
+        margin-top:10px;
+    }
+    .formulario_contacto{
+        margin: 0 auto;
+        text-align: center;
+        border:1px solid red;
+        width: 30%;
+    }
+</style>
+</head>
+
+<body onload="javascript:document.forms[0].nombre.focus();">
+    <div id="contenedor">
+        <div class="formulario_contacto">
+        <h2>FORMULARIO</h2> 
+        <form method="POST" enctype="text/plain" name="formulario_datos" onsubmit="return posEnviar(this)">
+            <label>Introduzca su nombre:</label><br>
+            <input type="text" name="nombre" placeholder="Nombre" size="40" maxlength="40"><br>
+            <label>Edad:</label><br>
+            <input type="text" name="edad" placeholder="Edad" size="4" maxlength="3"><br>
+            <label>Dirección</label><br>
+            <input type="text" name="direccion" placeholder="Dirección" size="40" maxlength="60"><br>
+            <label>Ciudad de residencia:</label><br>
+            <input type="text" name="ciudad" placeholder="Ciudad" size="30" maxlength="30"><br>
+            <label>Código postal:</label><br>
+            <input type="text" name="cpostal" placeholder="Código Postal" size="8" maxlength="8"><br>
+            <label>Teléfono de contacto:</label><br>
+            <input type="text" name="telefono" placeholder="Teléfono" size="10" maxlength="10"><br>
+            <label>Correo electrónico:</label><br>
+            <input type="text" name="email" placeholder="Correo Electrónico" size="40" maxlength="60"><br>
+            <label>¿Qué servicio desea?</label><br>
+            <select name="pregunta" onchange="nuevaOpcion()">
+                <option>Imágenes sobre el producto</option>
+                <option>Precio del producto</option>
+                <option>Consulta general</option>
+            </select><br><br>
+            <input type="submit" value="ENVIAR FORMULARIO"><br><br>
+
+        </form>
+    </div>
+</div>    
+</body>
+</html>
