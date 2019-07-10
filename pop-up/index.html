@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
 
@@ -18,7 +19,8 @@
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	visibility: hidden;
+    visibility: hidden;
+    font-family: Raleway, sans-serif;
 }
 .overlay.active {
 	visibility: visible;
@@ -27,7 +29,7 @@
 	background: #F8F8F8;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
+
 	padding: 20px;
 	text-align: center;
 	width: 600px;
@@ -36,10 +38,13 @@
 	font-size: 36px;
 	font-weight: 600;
 	margin-bottom: 10px;
+    font-family: Raleway, sans-serif;
 }
 .popup form p {
 	font-size: 15px;
+    font-family: lato,sans-serif;
     text-align: justify;
+    color: #78899b;
     padding:  10px;
 }
 .popup form .btn-submit {
@@ -55,7 +60,7 @@
 	transition: .3s ease all;
 }
 .obli{
-    color:red;
+    color:red !important;
 }
 a{
     color: rgb(19, 101, 224);
@@ -121,7 +126,7 @@ btnCerrarPopup.addEventListener('click', function(e){
 function checkForm(form)
 {
     if(!form.terms.checked) {
-      alert("Please indicate that you accept the Terms and Conditions");
+      alert("Por favor indique que acepta los Términos y Condiciones");
       form.terms.focus();
       return false;
     }
