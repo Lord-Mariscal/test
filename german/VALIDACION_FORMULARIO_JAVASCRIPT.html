@@ -10,17 +10,18 @@
 
     <style>
     select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-        width: 100%;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 20%;
     }
     .select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-    width: 100%;
-}    .select select {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .select select {
         font-family: 'Arial';
         display: inline-block;
         width: 100%;
@@ -35,38 +36,38 @@
         -webkit-appearance: none;
         -moz-appearance: none;
     }
-        .select select::-ms-expand {
-            display: none;
+    .select select::-ms-expand {
+        display: none;
         }
-        .select select:hover,
-        .select select:focus {
-            color: #000000;
-            background: #cccccc;
+    .select select:hover,
+    .select select:focus {
+        color: #000000;
+        background: #cccccc;
         }
-        .select select:disabled {
-            opacity: 0.3;
-            pointer-events: none;
+    .select select:disabled {
+        opacity: 0.3;
+        pointer-events: none;
         }
-.select_arrow {
-    position: absolute;
-    top: 15px;
-    right: 24px;
-    width: 10px;
-    height: 10px;
-    border: solid #7b7b7b;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
-    border-color: #000000;
-}
-.select select:disabled ~ .select_arrow {
-    border-top-color: #cccccc;
-}
+    .select_arrow {
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        width: 10px;
+        height: 10px;
+        border: solid #7b7b7b;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .select select:hover ~ .select_arrow,
+    .select select:focus ~ .select_arrow {
+        border-color: #000000;
+    }
+    .select select:disabled ~ .select_arrow {
+        border-top-color: #cccccc;
+    }
     #contenedor{
         width: 95%;
         padding: 30px;
@@ -192,6 +193,7 @@
         
         if(formulario_datos.nombre.value == ""){
             alert("Introduzca su nombre");
+            formulario_datos.nombre.style.backgoundColor= "#000000";
             formulario_datos.nombre.focus();
             return false;
         }
