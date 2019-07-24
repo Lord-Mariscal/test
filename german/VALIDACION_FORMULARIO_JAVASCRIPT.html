@@ -10,20 +10,21 @@
 
     <style>
     select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
         width: 100%;
     }
     .select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-    width: 100%;
-}    .select select {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100%;
+    }    
+    .select select {
         font-family: 'Arial';
         display: inline-block;
-        width: 100%;
+        width: 50%;
         cursor: pointer;
         padding: 12px 22px;
         outline: 0;
@@ -47,26 +48,26 @@
             opacity: 0.3;
             pointer-events: none;
         }
-.select_arrow {
-    position: absolute;
-    top: 15px;
-    right: 24px;
-    width: 10px;
-    height: 10px;
-    border: solid #7b7b7b;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
-    border-color: #000000;
-}
-.select select:disabled ~ .select_arrow {
-    border-top-color: #cccccc;
-}
+    .select_arrow {
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        width: 10px;
+        height: 10px;
+        border: solid #7b7b7b;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .select select:hover ~ .select_arrow,
+    .select select:focus ~ .select_arrow {
+        border-color: #000000;
+    }
+    .select select:disabled ~ .select_arrow {
+        border-top-color: #cccccc;
+    }
     #contenedor{
         width: 95%;
         padding: 30px;
@@ -77,7 +78,7 @@
         text-align: center;
         border:1px solid rgb(255, 255, 255);
         width: 39%;
-        border-radius: 13%;
+        border-radius: 5%;
         background-image: linear-gradient(to right bottom, #ca35bb, #dd34ab, #ec3a9b, #f6458d, #fc5380, #ff6174, #ff6f6b, #ff7e63, #ff905b, #ffa355, #ffb752, #ffcb53);
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
             }
@@ -131,7 +132,8 @@
         text-shadow: 1px 2px 1px rgba(191,191,191,0.73) ;
         transition: background 218ms cubic-bezier(0, 1.005, 0.99, -0.12) 5ms;
         transform: rotateX(-0.5729577951308231deg) rotateY(1.1459155902616462deg);
-
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
     h2{
         font-family: 'DM Serif Display', serif;
@@ -152,54 +154,76 @@
     <div id="contenedor">
         <div class="formulario_contacto">
         <h2>FORMULARIO</h2> 
-        <hr class="separador"> 
+        <hr class="separador">  
+        <label>Por favor ingrese la información <br> los campos obligatorios</label><br>
         <form method="POST" enctype="text/plain" name="formulario_datos" onsubmit="return posEnviar(this)">
-            <label>Nombre:</label><br>
-            <input type="text" name="nombre" placeholder="Nombre" size="10" maxlength="10"><br>
-            <label>Apellido:</label><br>
-            <input type="text" name="nombre" placeholder="Nombre" size="10" maxlength="10"><br> 
-            <label>Especifique su rango de edad:</label><br>
-            <input type="text" name="edad" placeholder="Edad" size="4" maxlength="3"><br>
-            <label>Dirección</label><br>
-            <input type="text" name="direccion" placeholder="Dirección" size="30" maxlength="60"><br>
-            <label>Ciudad de residencia:</label><br>
-            <input type="text" name="ciudad" placeholder="Ciudad" size="30" maxlength="30"><br>
-            <label>Código postal:</label><br> 
-            <input type="text" name="cpostal" placeholder="Código Postal" size="8" maxlength="8"><br>
-            <label>Teléfono de contacto:</label><br>
-            <input type="text" name="telefono" placeholder="Teléfono" size="10" maxlength="10"><br>
-            <label>Correo electrónico:</label><br>
-            <input type="text" name="email" placeholder="Correo Electrónico" size="30" maxlength="60"><br>
+            <input type="text" name="nombre" onkeyup="this.value=Nombre(this.value)" placeholder="Nombre"  maxlength="10"><br>
+            <input type="text" name="Apellido" onkeyup="this.value=Nombre(this.value)" placeholder="Apellido"  maxlength="10"><br> 
+            <input type="text" name="edad" placeholder="Edad" onkeyup="this.value=CodTel(this.value)" maxlength="3"><br>
+            <input type="text" name="direccion" onkeyup="this.value=Direccion(this.value)" placeholder="Dirección"  maxlength="60"><br>
+            <input type="text" name="ciudad" onkeyup="this.value=Nombre(this.value)" placeholder="Ciudad"  maxlength="30"><br>
+            <input type="text" name="cpostal" onkeyup="this.value=CodTel(this.value)" placeholder="Código Postal"  maxlength="8"><br>
+            <input type="text" name="telefono" onkeyup="this.value=CodTel(this.value)" placeholder="Teléfono"  maxlength="9"><br>
+            <input type="text" name="email" placeholder="Correo Electrónico"  maxlength="60"><br>
             <label>¿Qué servicio desea?</label><br>
             <div class="select">
             <select name="pregunta" onchange="nuevaOpcion()">
-                <option>Imágenes sobre el producto</option>
                 <option>Precio del producto</option>
+                <option>Imágenes sobre el producto</option>
                 <option>Consulta general</option>
-                <div class="select_arrow">
-                    </div>
+                <div class="select_arrow"></div>
                 </div>
             </select><br><br>
-            <input class="boton" type="submit" value="ENVIAR FORMULARIO"><br><br>
-
+            <input class="boton" type="submit" value="ENVIAR"><br><br>
         </form>
     </div>
 </div>
 
 <script>
-   
+      // esta parte avita que se puendan escrivir carecteres no deseados, 
+    // si escrives algo en el imput que no esta incluido en el filtro se elimina automaticamente.
+    function Nombre(string){
+        var out = '';
+        var filtro = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz';
+        for (var i=0; i<string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1) 
+	     out += string.charAt(i);
+        return out;
+    } 
+    function CodTel(string){
+        var out = '';
+        var filtro = '1234567890';
+        for (var i=0; i<string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1) 
+	     out += string.charAt(i);
+        return out;
+    } 
+    function Direccion(string){
+        var out = '';
+        var filtro = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+        for (var i=0; i<string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1) 
+	     out += string.charAt(i);
+        return out;
+    } 
+
     function posEnviar(formulario_datos){
-        
+
         if(formulario_datos.nombre.value == ""){
             alert("Introduzca su nombre");
             formulario_datos.nombre.focus();
+            return false;
+        }
+        if(formulario_datos.Apellido.value == ""){
+            alert("Introduzca su apellido");
+            formulario_datos.Apellido.focus();
             return false;
         }
         if(formulario_datos.edad.value ==""){
             alert("Introduzca su edad");
              formulario_datos.edad.focus();
              return false;
-          }
+        }
         if(formulario_datos.direccion.value == ""){
             alert("Introduzca su dirección");
             formulario_datos.direccion.focus();
@@ -215,8 +239,8 @@
             formulario_datos.cpostal.focus();
             return false;
         }
-        if(isNaN (formulario_datos.cpostal.value)){
-            alert("Código postal no válido");
+        if(formulario_datos.cpostal.value <= 8){
+            alert("Introduzca su código postal");
             formulario_datos.cpostal.focus();
             return false;
         }
@@ -225,22 +249,20 @@
             alert("Introduzca su teléfono");
             formulario_datos.telefono.focus();
             return false;
-            }
-          if(isNaN(formulario_datos.telefono.value)){
+        }
+            if(formulario_datos.telefono.value <= 9){
             alert("Número de teléfono no válido");
             formulario_datos.telefono.focus();
             return false;
-          }
-        
+        }
+
         if(formulario_datos.email.value == ""){
             alert("Introduzca su correo electrónico");
             formulario_datos.email.focus();
             return false;
-            }
-        
+        }
     }
-
-
+  
 </script>
 </body>
 </html>

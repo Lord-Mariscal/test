@@ -11,9 +11,7 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="imagehover.min.css">
-    <link href="all.css" rel="stylesheet"> 
-    <script defer src="all.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/>
     <style>
         * {
             box-sizing: border-box;
@@ -50,7 +48,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(10, 10, 10, .6), rgba(0, 0, 0, .9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px), 
+            background: linear-gradient(rgba(26, 218, 224, 0.6), rgba(133, 224, 12, 0.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px), 
                 url('');
             background-size: cover;
             background-position: center;
@@ -62,14 +60,8 @@
             font-family: 'Russo One', sans-serif;
             position: relative;
             font-size: 300%;
-            background: linear-gradient(to left , #e21c0e 16%, #e0e40a 32%, #25dd0c 48%, #12b2da 64%, #2015bb 80%, #eb0aeb 90%, #e21c0e 100%);
-            color: #000;
+            color: linear-gradient(to top ,#fff 20%, #fff 100%);
             background-size: 200% auto;
-        background-clip: text;
-        text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-            animation: shine 2s linear infinite;
         }
         @keyframes shine {
             to {
@@ -105,7 +97,6 @@
         li {
             display: inline;
             margin: 15px;
-            border-left: 1px solid white;
             padding-left: 7px;
             color: black;
         }
@@ -125,7 +116,7 @@
             background-size: 100% 88%;
         }
         .wrapper{
-            background-color: #6C6F76;
+            background-color: #89c4d6b0;
         }
 
     /******************************************************************
@@ -145,25 +136,25 @@
         /* efecto parallax 4 imágenes*/
         .parallax {
             height: 500px;
-            background-image: url('https://media.giphy.com/media/3og0ITe9gRRaR2UeBi/giphy.gif');
+            background-image: url('https://cdna.artstation.com/p/assets/images/images/001/798/518/large/alena-aenami-revenant3-2.jpg?1452975563');
             background-size: cover;
             background-attachment: fixed;}
 
         .parallax2 {
             height: 500px;
-            background-image: url('https://media.giphy.com/media/mvgATAqXnW0qBc6wAX/giphy.gif');
+            background-image: url('https://cdna.artstation.com/p/assets/images/images/017/649/184/large/luka-mivsek-luka-mivsek-island-01.jpg?1556815574');
             background-size: cover;
             background-attachment: fixed;}
 
         .parallax3 {
             height: 500px;
-            background-image: url('https://media.giphy.com/media/atZII8NmbPGw0/giphy.gif');
+            background-image: url('https://cdnb.artstation.com/p/assets/images/images/006/691/165/large/jason-scheier-canyon-red-js.jpg?1500503319');
             background-size: cover;
             background-attachment: fixed;}
 
         .parallax4 {
             height: 500px;
-            background-image: url('https://media.giphy.com/media/12qRtq717SsFFe/giphy.gif');
+            background-image: url('https://cdnb.artstation.com/p/assets/images/images/001/027/711/large/wadim-kashin-cybseq-street.jpg?1443926915');
             background-size: cover;
             background-attachment: fixed;}
 
@@ -197,7 +188,6 @@
             background-color: dimgrey;
             height: 100px;}
         p {
-            color: #fff;
             font-family: 'DM Serif Display', serif;
             font-size: 1.2em;}
         .contenedor-parallax {
@@ -212,7 +202,7 @@
         .center {
             text-align: center;}
         .black {
-            background-color: #252525;}
+            background-color: #fff;}
 </style>
 </head>
 <body>
@@ -220,14 +210,14 @@
         <div id="app">
             <div id="wrapper">
                 <!-- Make sure data-text equals the text you put inside the tags. -->
-                <h1 class="glitch tet">GameReview</h1>
+                <h1 class="glitch tet">SketchTeam</h1>
             </div>
     </header>
     <nav>
         <ul class="wrapper">
             
             <li><a href="#historia" class="underline--magical">Historia</a></li>
-            <li><a href="#rev" class="underline--magical">Review</a></li>
+            <li><a href="#rev" class="underline--magical">Quienes Somos</a></li>
             <li><a href="#red" class="underline--magical">Redes Sociales</a></li>
             <li><a href="#con" class="underline--magical">Contacto</a></li>
         </ul>
@@ -237,56 +227,70 @@
     <div class="contenedor-fluido black">
         <div class="contenedor center">
             <p class="texto_amarillo" >Historia</p>
-            <p>A todos nos gustan los juegos ya 
-            </p>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                 Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+                 cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
+                 de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+                 No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
+                 quedando esencialmente igual al original. Fue popularizado en los 60s con la 
+                 creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente 
+                 con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         </div>
     </div>
     <div class="contenedor-parallax imghvr-shutter-in-out-diag-2">
-        <div class="parallax ">a</div>
+        <div class="parallax "></div>
     </div>
     
     <a name="rev"></a>
     <div class="contenedor-fluido black">
         <div class="contenedor center">
             <p class="texto_amarillo" >Review</p>
-            <p>La ciudad se compone de cinco boroughs (a veces traducido como 'condado', 'distrito' o 'comuna') cada uno de 
-                los cuales coincide con un condado: Bronx, Brooklyn, Manhattan, Queens, y Staten Island. Con más de 24 millones de neoyorquinos en
-                un área urbana de 830 kilómetros cuadrados (320 m2), Nueva York es la segunda ciudad con más densidad de población de los Estados Unidos, 
-                solo detrás de Union City, Nueva Jersey, localizada al otro lado del río Hudson.</p>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                    Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+                    cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
+                    de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+                    No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
+                    quedando esencialmente igual al original. Fue popularizado en los 60s con la 
+                    creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente 
+                    con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         </div>
     </div>
     <div class="contenedor-parallax">
-        <div class="parallax2">b</div>
+        <div class="parallax2"></div>
     </div>
     <a name="red"></a>
     <div class="contenedor-fluid black">
         <div class="contenedor center">
-            <p class="texto_amarillo">Redes Sociales</p>
-            <p>El puente de Brooklyn (conocido inicialmente como puente de Nueva York y Brooklyn) une los distritos de Manhattan 
-                y de Brooklyn en la ciudad de Nueva York. Se construyó entre 1870 y 1883 y, en el momento de su inauguración, era el puente colgante
-                más grande del mundo (mide 1825 metros de largo, y la luz entre pilares es de 486,3 metros), récord de luz hasta que en 1889 se 
-                construye el Forth Bridge, con una luz máxima de 521 m. También fue el primero suspendido mediante cables de
-                acero. Desde entonces, se ha convertido en uno de los símbolos más reconocibles de Nueva York.</p>
+            <p class="texto_amarillo">Redes Sociales <i class="fab fa-twitter"></i></p>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                    Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+                    cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
+                    de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+                    No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
+                    quedando esencialmente igual al original. Fue popularizado en los 60s con la 
+                    creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente 
+                    con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         </div>
     </div>
     <div class="contenedor-parallax">
-        <div class="parallax3">c</div>
+        <div class="parallax3"></div>
     </div>
     <a name="con"></a>
     <div class="contenedor-fluid black">
         <div class="contenedor center">
             <p class="texto_amarillo">Contacto</p>
-            <p>La Bolsa de Nueva York (New York Stock Exchange, NYSE, en inglés) es el mayor mercado de valores del mundo en volumen monetario 
-                y el primero en número de empresas adscritas. Su volumen en acciones fue superado por la del NASDAQ durante los
-                años 90, pero el capital de las compañías listadas en la NYSE es cinco veces mayor que en el NASDAQ. La Bolsa de Nueva York cuenta 
-                con un volumen anual de transacciones de 36 billones de dólares, incluyendo los 12 billones de compañías
-                no estadounidenses. Fue creada en 1817, cuando un grupo de corredores de bolsa se organizó formando un comité llamado «New York Stock 
-                and Exchange Board» (NYS&EB) con la finalidad de poder controlar el flujo de acciones que, en aquellos
-                tiempos, era negociado libremente y principalmente en la acera de Wall Street.</p>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                    Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+                    cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
+                    de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+                    No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
+                    quedando esencialmente igual al original. Fue popularizado en los 60s con la 
+                    creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente 
+                    con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         </div>
     </div>
     <div class="contenedor-parallax">
-        <div class="parallax4">d</div>
+        <div class="parallax4"></div>
     </div>
     
     <footer>
